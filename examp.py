@@ -3,6 +3,7 @@ import json
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+#이것도 수정완료
 
 # json 파일들이 있는 디렉토리 경로
 directory = 'C:/Users/seungyeon0510/Desktop/kist_2024/main/mediapipee'

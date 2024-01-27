@@ -4,7 +4,7 @@ import numpy as np
 import json
 from tqdm import tqdm
 
-#tnwjd
+#수정했으
 
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
