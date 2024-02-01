@@ -14,16 +14,16 @@ with open('pose_landmark/body_normal_line.json', 'r') as f:
     planes = json.load(f)
 
 # 각도를 계산해서 저장할 리스트를 생성
-body_angle_up_down = []
+body_angle_front_back = []
 body_angle_right_left = []
 
 # 각 프레임에서 법선 벡터의 방향을 계산
 for plane in planes:
     if plane is not None:
         # 법선 벡터가 위아래로 움직일 때의 각도
-        up_down_angle = calculate_angle(plane, [0, 1, 0])
+        front_back_angle = calculate_angle(plane, [0, 0, 1])
 
-        body_angle_up_down.append(up_down_angle)
+        body_angle_front_back.append(front_back_angle)
 
         # 법선 벡터가 좌우로 움직일 때의 각도
         left_right_angle = calculate_angle(plane, [1, 0, 0])
@@ -31,11 +31,11 @@ for plane in planes:
         body_angle_right_left.append(left_right_angle)
     else:
         # 벡터가 None인 프레임에서는 각도를 None으로 저장
-        body_angle_up_down.append(None)
+        body_angle_front_back.append(None)
         body_angle_right_left.append(None)
 
 # 계산한 각도를 json 파일로 저장
-with open('pose_landmark/body_angle_up_down.json', 'w') as f:
-    json.dump(body_angle_up_down, f)
+with open('pose_landmark/body_angle_front_back.json', 'w') as f:
+    json.dump(body_angle_front_back, f)
 with open('pose_landmark/body_angle_right_left.json', 'w') as f:
     json.dump(body_angle_right_left, f)

@@ -69,7 +69,7 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
 
 cap.release()
 cv2.destroyAllWindows()
-
+r
 for name, coordinates in landmark_dict.items():
     with open(f'pose_landmark/{name}.json', 'w') as f:
         json.dump(coordinates, f)

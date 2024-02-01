@@ -14,19 +14,19 @@ with open('face_landmark/face_normal_line.json', 'r') as f:
     planes = json.load(f)
 
 # 각도를 계산해서 저장할 리스트를 생성
-face_angle_up_down = []
+face_angle_front_back = []
 face_angle_right_left = []
 
 # 각 프레임에서 법선 벡터의 방향을 계산
 for plane in planes:
     # 벡터가 None인 프레임에서는 각도를 None으로 저장
     if plane is None:
-        face_angle_up_down.append(None)
+        face_angle_front_back.append(None)
         face_angle_right_left.append(None)
     else:
         # 법선 벡터가 위아래로 움직일 때의 각도
-        up_down_angle = calculate_angle(plane, [0, 1, 0])
-        face_angle_up_down.append(up_down_angle)
+        front_back_angle = calculate_angle(plane, [0, 0, 1])
+        face_angle_front_back.append(front_back_angle)
 
         # 법선 벡터가 좌우로 움직일 때의 각도
         left_right_angle = calculate_angle(plane, [1, 0, 0])
@@ -34,7 +34,7 @@ for plane in planes:
 
 
 # 계산한 각도를 json 파일로 저장
-with open('face_landmark/face_angle_up_down.json', 'w') as f:
-    json.dump(face_angle_up_down, f)
+with open('face_landmark/face_angle_front_back.json', 'w') as f:
+    json.dump(face_angle_front_back, f)
 with open('face_landmark/face_angle_right_left.json', 'w') as f:
     json.dump(face_angle_right_left, f)
