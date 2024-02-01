@@ -20,11 +20,10 @@ landmarks = {
 }
 
 landmark_dict = {name: [] for name in landmarks.values()}
-
 total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
 with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as pose:
-    for _ in tqdm(range(total_frames), desc="Processing frames"):
+    for frame_no in tqdm(range(total_frames), desc="Processing frames"):
         success, image = cap.read()
 
         if success:
@@ -32,34 +31,34 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
             image.flags.writeable = False
             results = pose.process(image)
 
-            # 각 프레임에서 'null' 값을 추가하거나 랜드마크를 추가합니다.
             for name in landmarks.values():
                 if results.pose_landmarks:
                     for idx, landmark in enumerate(results.pose_landmarks.landmark):
                         if idx in landmarks and landmarks[idx] == name:
-                            landmark_dict[name].append([landmark.x, landmark.y, landmark.z])  # 좌표를 추가
+                            landmark_dict[name].append([landmark.x, landmark.y, landmark.z])
                             break
-                    else:  # 랜드마크가 없는 경우
+                    else:
                         landmark_dict[name].append([None, None, None])
-                else:  # 랜드마크가 없는 경우
+                else:
                     landmark_dict[name].append([None, None, None])
 
-            # 랜드마크를 영상에 표시
             image.flags.writeable = True
             image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
             if results.pose_landmarks:
                 for idx, landmark in enumerate(results.pose_landmarks.landmark):
                     if idx in landmarks:
-                        # 랜드마크를 영상에 표시
                         image_hight, image_width, _ = image.shape
                         landmark_px = mp_drawing._normalized_to_pixel_coordinates(landmark.x, landmark.y, image_width, image_hight)
                         cv2.circle(image, landmark_px, 3, (255, 0, 0), 2)
 
-                        # 랜드마크 좌표를 텍스트로 영상에 표시
                         landmark_coords = f"{landmarks[idx]}: x: {landmark.x:.2f}, y: {landmark.y:.2f}, z: {landmark.z:.2f}"
                         cv2.putText(image, landmark_coords, (10, 30 + 20 * idx),
                                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+
+            # 프레임 번호를 화면에 표시
+            cv2.putText(image, f'Frame: {frame_no}', (10, 20),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
 
             cv2.imshow('MediaPipe Pose', image)
 
