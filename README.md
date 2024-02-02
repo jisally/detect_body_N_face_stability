@@ -1,6 +1,6 @@
 <Detect body&face stability>
 
-0102~0229, KIST_Creamo
+0102~0229, KIST_Creamo 
 
 preprocess the video
 : crop to focus child
