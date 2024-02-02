@@ -6,7 +6,7 @@ from tqdm import tqdm
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 
-video_path = 'C:/Users/seungyeon0510/Desktop/kist_2024/main/영상데이터/crop_output2_origin.mp4'
+video_path = 'C:/Users/seungyeon0510/Desktop/kist_2024/main/video/child_focus_240123_13_SI008L0F_T2_10fps.mp4'
 cap = cv2.VideoCapture(video_path)
 
 landmarks = {
@@ -69,7 +69,7 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
 
 cap.release()
 cv2.destroyAllWindows()
-r
+
 for name, coordinates in landmark_dict.items():
     with open(f'pose_landmark/{name}.json', 'w') as f:
         json.dump(coordinates, f)

@@ -13,7 +13,7 @@ mp_drawing = mp.solutions.drawing_utils
 left_eye_landmarks = [133, 155, 154, 153, 145, 144, 163, 7, 33, 246, 161, 160, 159, 158, 157, 173]
 right_eye_landmarks = [362, 382, 381, 380, 374, 373, 390, 249, 263, 466, 388, 387, 386, 385, 384, 398]
 
-cap = cv2.VideoCapture('C:/Users/seungyeon0510/Desktop/kist_2024/main/영상데이터/output.mp4')
+cap = cv2.VideoCapture('C:/Users/seungyeon0510/Desktop/kist_2024/main/video/output.mp4')
 
 # 눈동자 좌표를 저장할 list 생성
 eye_center_tracking = []
