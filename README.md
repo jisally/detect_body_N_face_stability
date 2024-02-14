@@ -48,7 +48,7 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 <br/>
 : crop to focus child
 <br/>
-: 30fps(original) to 10fps
+: 30fps(original) to 10fps (if needed)
 <br/><br/>
 
     ffmpeg -i input.mp4 -r 10 output.mp4
