@@ -15,14 +15,22 @@ Postural stability assessment through changes in the angular displacement of the
 <br/><br/>
 <h1>▶ How to RUN? </h1>
 <hr/>
+[Open in Colab](https://colab.research.google.com/github/jisally/detect_body_N_face_stability/blob/master//content/drive/MyDrive/KIST_CREAMO/preprocess_the_video.ipynb)
+<br/>
 RUN main.py
 <br/><br/>
 <h1> ➕ Details </h1>
 <hr/>
 preprocess the video
+<br/>
 : crop to focus child
+<br/>
 : 30fps(original) to 10fps
- <br/> <br/>
+<br/>
+
+    ffmpeg -i input.mp4 -r 10 output.mp4
+
+ <br/>
 Enter the path of the video file in input_your_mp4
  <br/> <br/>
 body_detection.py
