@@ -2,9 +2,19 @@
 <hr/>
 Postural stability assessment through changes in the angular displacement of the body and face planes
 <br/><br/>
+<h1>💻: Project Introduction </h1>
+<hr/>
+
+Rotation of the body forward/backward: Angle between the normal vector of the body plane and the z-axis.<br/>
+Rotation of the body left/right: Angle between the normal vector of the body plane and the x-axis.<br/>
+<br/>
+Rotation of the head forward/backward: Angle between the normal vector of the head plane and the z-axis.<br/>
+Rotation of the head left/right: Angle between the normal vector of the head plane and the x-axis.<br/>
+
+<br/><br/>
 <h1>:calendar: When? </h1>
 <hr/>
-0102~0229, KIST_Creamo
+0102~0229, KIST_Creamo<br/>
 <br/><br/>
 <h1>:gear: Environment Setting</h1>
 <hr/>
