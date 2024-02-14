@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 opencv-python==4.9.0.80
 mediapipe==0.10.9
 tqdm==4.65.0
 numpy==1.23.5
+=======
+opencv-python==4.9.0.80
+mediapipe==0.10.9
+tqdm==4.65.0
+numpy==1.23.5
+>>>>>>> 205c86957fcc766f2057174faf78c9996c8694b7
 matplotlib==3.7.1
