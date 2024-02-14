@@ -12,7 +12,7 @@ landmark_names = ['top_face', 'right_face', 'left_face']
 landmark_map = dict(zip(target_landmarks, landmark_names))
 
 # Loading video
-cap = cv2.VideoCapture('C:/Users/seungyeon0510/Desktop/kist_2024/main/video/child_focus_240123_13_SI008L0F_T2_10fps.mp4')
+cap = cv2.VideoCapture('input_your_mp4')
 
 # Get total frame count
 total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
