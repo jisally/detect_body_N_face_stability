@@ -22,7 +22,9 @@ RUN main.py
 preprocess the video
 : crop to focus child
 : 30fps(original) to 10fps
-
+ <br/> <br/>
+Enter the path of the video file in input_your_mp4
+ <br/> <br/>
 body_detection.py
 : ectract each landmark's (x,y,z) in video
 
@@ -42,3 +44,6 @@ face_plane_animation.py
 face_angle.py
 : extract the angle between the normal vector and the z-axis(ex. nod)
 : extract the angle between the normal vector and the x-axis(ex. shake head)
+
+shoulder_track.py
+: Track the midpoint between shoulder_right and shoulder_left
