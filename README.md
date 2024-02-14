@@ -23,6 +23,17 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
   <li><b>IDE: </b> VSCode, Google Colab</li>
 </ul>
 <br/><br/>
+<h1>✅ Version</h1>
+<hr/>
+
+    opencv-python==4.9.0.80
+    mediapipe==0.10.9
+    tqdm==4.65.0
+    numpy==1.23.5
+    matplotlib==3.7.1
+
+<br/>
+
 <h1>▶ How to RUN? </h1>
 <hr/>
 
@@ -53,7 +64,7 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 
     ffmpeg -i input.mp4 -r 10 output.mp4
 
- <br/> <br/>
+ <br/>
 <b>body_detection.py</b> <br/>
 : ectract each landmark's (x,y,z) in video
 
