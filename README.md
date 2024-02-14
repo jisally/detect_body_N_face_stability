@@ -14,7 +14,7 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 <br/><br/>
 <h1>:calendar: When? </h1>
 <hr/>
-0102~0229, KIST_Creamo<br/>
+0102-0229, KIST_Creamo<br/>
 <br/><br/>
 <h1>:gear: Environment Setting</h1>
 <hr/>
@@ -42,9 +42,9 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 <br/>
 <h1> ➕ Details </h1>
 <hr/>
-<b>preprocess the video</b>
+<b>preprocess_the_video.ipynb</b>
 <br/>
-:Enter the path of the video file in input_your_mp4
+: Enter the path of the video file in input_your_mp4
 <br/>
 : crop to focus child
 <br/>
@@ -54,25 +54,25 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
     ffmpeg -i input.mp4 -r 10 output.mp4
 
  <br/> <br/>
-<b>body_detection.py<b/> <br/>
+<b>body_detection.py</b> <br/>
 : ectract each landmark's (x,y,z) in video
 
-<b>body_plane_animation.py<b/> <br/>
+<b>body_plane_animation.py</b> <br/>
 : extract normal line in body and visualization
 
-<b>body_angle.py<b/> <br/>
+<b>body_angle.py</b> <br/>
 : extract the angle between the normal vector and the z-axis
 : extract the angle between the normal vector and the x-axis
 
-<b>face_detection.py<b/> <br/>
+<b>face_detection.py</b> <br/>
 : ectract each landmark's (x,y,z) in video
 
-<b>face_plane_animation.py<b/> <br/>
+<b>face_plane_animation.py</b> <br/>
 : extract normal line in face and visualization
 
-<b>face_angle.py<b/> <br/>
+<b>face_angle.py</b> <br/>
 : extract the angle between the normal vector and the z-axis(ex. nod)
 : extract the angle between the normal vector and the x-axis(ex. shake head)
 
-<b>shoulder_track.py<b/> <br/>
+<b>shoulder_track.py</b> <br/>
 : Track the midpoint between shoulder_right and shoulder_left
