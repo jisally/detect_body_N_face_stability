@@ -15,9 +15,8 @@ Postural stability assessment through changes in the angular displacement of the
 <br/><br/>
 <h1>▶ How to RUN? </h1>
 <hr/>
-<a target="_blank" href="https://colab.research.google.com/github/jisally/detect_body_N_face_stability">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jisally/detect_body_N_face_stability/blob/main/preprocess_the_video.ipynb)
+
 RUN main.py
 <br/><br/>
 <h1> ➕ Details </h1>
