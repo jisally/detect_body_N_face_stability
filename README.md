@@ -1,6 +1,6 @@
 <h1> Detect body and face stability </h1>
 <hr/>
-Postural stability assessment through changes in the angular displacement of the body and face planes
+Assessment of postural stability using Google MediaPipe by analyzing changes in the angular displacement of the body and facial planes
 <br/><br/>
 <h1>💻: Project Introduction </h1>
 <hr/>
