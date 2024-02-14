@@ -15,7 +15,7 @@ Postural stability assessment through changes in the angular displacement of the
 <br/><br/>
 <h1>▶ How to RUN? </h1>
 <hr/>
-<a target="_blank" href="[https://colab.research.google.com/github/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/model_monitoring/model_monitoring.ipynb](https://colab.research.google.com/github/jisally/detect_body_N_face_stability/blob/master//content/drive/MyDrive/KIST_CREAMO/preprocess_the_video.ipynb)">
+<a target="_blank" href="https://colab.research.google.com/github/jisally/detect_body_N_face_stability">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 RUN main.py
