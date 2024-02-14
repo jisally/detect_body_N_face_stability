@@ -27,6 +27,11 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 <hr/>
 Requirements.txt<br/><br/>
 
+
+    pip install -r requirements.txt
+
+<br/>
+
     opencv-python==4.9.0.80
     mediapipe==0.10.9
     tqdm==4.65.0
