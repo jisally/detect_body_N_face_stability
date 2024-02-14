@@ -10,50 +10,59 @@ Postural stability assessment through changes in the angular displacement of the
 <hr/>
 <ul>
   <li><b>Python: </b> 3.11.1</li>
-  <li><b>IDE: </b> VSCode</li>
+  <li><b>IDE: </b> VSCode, Google Colab</li>
 </ul>
 <br/><br/>
 <h1>▶ How to RUN? </h1>
 <hr/>
-<a target="_blank" href="https://colab.research.google.com/github/jisally/detect_body_N_face_stability/blob/main/preprocess_the_video.ipynb">
+
+<ul>
+  <li><b>PreProcessing</b><br/></li>
+  <br/>
+  <a target="_blank" href="https://colab.research.google.com/github/jisally/detect_body_N_face_stability/blob/main/preprocess_the_video.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
+  <br/><br/><br/>
+  <li><b>Calculate the Angle</b><br/></li>
+  <br/>
+  RUN main.py
+</ul>
+
+
 <br/>
-RUN main.py
-<br/><br/>
 <h1> ➕ Details </h1>
 <hr/>
-preprocess the video
+<b>preprocess the video</b>
+<br/>
+:Enter the path of the video file in input_your_mp4
 <br/>
 : crop to focus child
 <br/>
 : 30fps(original) to 10fps
-<br/>
+<br/><br/>
 
     ffmpeg -i input.mp4 -r 10 output.mp4
 
- <br/>
-Enter the path of the video file in input_your_mp4
  <br/> <br/>
-body_detection.py
+<b>body_detection.py<b/> <br/>
 : ectract each landmark's (x,y,z) in video
 
-body_plane_animation.py
+<b>body_plane_animation.py<b/> <br/>
 : extract normal line in body and visualization
 
-body_angle.py
+<b>body_angle.py<b/> <br/>
 : extract the angle between the normal vector and the z-axis
 : extract the angle between the normal vector and the x-axis
 
-face_detection.py
+<b>face_detection.py<b/> <br/>
 : ectract each landmark's (x,y,z) in video
 
-face_plane_animation.py
+<b>face_plane_animation.py<b/> <br/>
 : extract normal line in face and visualization
 
-face_angle.py
+<b>face_angle.py<b/> <br/>
 : extract the angle between the normal vector and the z-axis(ex. nod)
 : extract the angle between the normal vector and the x-axis(ex. shake head)
 
-shoulder_track.py
+<b>shoulder_track.py<b/> <br/>
 : Track the midpoint between shoulder_right and shoulder_left
