@@ -5,11 +5,11 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.animation import FuncAnimation
 
 # json 파일에서 랜드마크 데이터를 불러옵니다.
-with open('face_landmark/top_face.json') as f:
+with open('face_landmark_fin/top_face.json') as f:
     top_face = json.load(f)
-with open('face_landmark/right_face.json') as f:
+with open('face_landmark_fin/right_face.json') as f:
     right_face = json.load(f)
-with open('face_landmark/left_face.json') as f:
+with open('face_landmark_fin/left_face.json') as f:
     left_face = json.load(f)
 
 # 각 프레임에서 세 점을 지나는 평면과 그 평면의 법선 벡터를 계산합니다.
@@ -42,7 +42,7 @@ for i, (t, r, l) in enumerate(zip(top_face, right_face, left_face)):
     left_face_filtered.append(l)
 
 # 법선 벡터를 json 파일에 저장합니다.
-with open('face_landmark/face_normal_line.json', 'w') as f:
+with open('face_landmark_fin/face_normal_line2.json', 'w') as f:
     json.dump(planes, f)
 
 # 평면을 시각화합니다.
