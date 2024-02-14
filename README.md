@@ -25,6 +25,7 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 <br/><br/>
 <h1>✅ Version</h1>
 <hr/>
+Requirements.txt
 
     opencv-python==4.9.0.80
     mediapipe==0.10.9
