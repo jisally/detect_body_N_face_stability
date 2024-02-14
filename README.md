@@ -2,7 +2,7 @@
 <hr/>
 Assessment of postural stability using Google MediaPipe by analyzing changes in the angular displacement of the body and facial planes
 <br/><br/>
-<h1>💻: Project Introduction </h1>
+<h1>💻 Project Introduction </h1>
 <hr/>
 
 Rotation of the body forward/backward: Angle between the normal vector of the body plane and the z-axis.<br/>
