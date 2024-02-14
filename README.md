@@ -1,7 +1,24 @@
-<Detect body&face stability>
-
-0102~0229, KIST_Creamo 
-
+<h1> Detect body and face stability </h1>
+<hr/>
+Postural stability assessment through changes in the angular displacement of the body and face planes
+<br/><br/>
+<h1>:calendar: When? </h1>
+<hr/>
+0102~0229, KIST_Creamo
+<br/><br/>
+<h1>:gear: Environment Setting</h1>
+<hr/>
+<ul>
+  <li><b>Python: </b> 3.11.1</li>
+  <li><b>IDE: </b> VSCode</li>
+</ul>
+<br/><br/>
+<h1>▶ How to RUN? </h1>
+<hr/>
+RUN main.py
+<br/><br/>
+<h1> ➕ Details </h1>
+<hr/>
 preprocess the video
 : crop to focus child
 : 30fps(original) to 10fps
@@ -11,8 +28,6 @@ body_detection.py
 
 body_plane_animation.py
 : extract normal line in body and visualization
-
-&
 
 body_angle.py
 : extract the angle between the normal vector and the z-axis
