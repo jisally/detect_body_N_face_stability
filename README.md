@@ -14,7 +14,7 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 <br/><br/>
 <h1>:calendar: When? </h1>
 <hr/>
-0102-0229, KIST_Creamo<br/>
+240102-240229, KIST_Creamo<br/>
 <br/><br/>
 <h1>:gear: Environment Setting</h1>
 <hr/>
