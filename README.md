@@ -57,9 +57,112 @@ Requirements.txt<br/><br/>
 
 
 <br/>
+
+<h1> 📄 Docstring </h1>
+<hr/>
+
+<details>
+<summary><code>body_detection()</code></summary>
+
+Detects body landmarks from a video using MediaPipe Pose.
+
+### Parameters:
+- `video_path` (str): Path to the input video file.
+
+### Notes:
+- Saves the detected landmark coordinates as JSON files in the 'pose_landmark' directory.
+
+</details>
+
+<details>
+<summary><code>body_plane_animation()</code></summary>
+
+Creates a 3D animation of body planes based on the detected shoulder landmarks.
+
+### Notes:
+- Reads the shoulder landmark coordinates from JSON files and generates the animation.
+- Saves the computed body planes and the origin coordinates as JSON files.
+
+</details>
+
+<details>
+<summary><code>body_angle()</code></summary>
+
+Calculates body angles from the detected body planes.
+
+### Notes:
+- Reads the computed body planes from a JSON file and calculates the front-back and right-left angles.
+- Saves the calculated angles as JSON files.
+
+</details>
+
+<details>
+<summary><code>calculate_angle(a, b)</code></summary>
+
+Calculates the angle between two vectors.
+
+### Parameters:
+- `a` (list): First vector.
+- `b` (list): Second vector.
+
+### Returns:
+- `float`: Angle between the two vectors in degrees.
+
+</details>
+
+<details>
+<summary><code>face_detection()</code></summary>
+
+Detects facial landmarks from a video using MediaPipe FaceMesh.
+
+### Parameters:
+- `video_path` (str): Path to the input video file.
+
+### Notes:
+- Saves the detected facial landmark coordinates as JSON files in the 'face_landmark' directory.
+
+</details>
+
+<details>
+<summary><code>face_plane_animation()</code></summary>
+
+Generates a 3D animation of facial planes based on the detected facial landmarks.
+
+### Notes:
+- Reads the facial landmark coordinates from JSON files and generates the animation.
+- Saves the computed facial planes as JSON files.
+
+</details>
+
+<details>
+<summary><code>face_angle()</code></summary>
+
+Calculates facial angles from the detected facial planes.
+
+### Notes:
+- Reads the computed facial planes from a JSON file and calculates the front-back and right-left angles.
+- Saves the calculated angles as JSON files.
+
+</details>
+
+<details>
+<summary><code>calculate_angle(a, b)</code></summary>
+
+Calculates the angle between two vectors.
+
+### Parameters:
+- `a` (list): First vector.
+- `b` (list): Second vector.
+
+### Returns:
+- `float`: Angle between the two vectors in degrees.
+
+</details>
+<br/>
+
+
 <h1> ➕ Details </h1>
 <hr/>
-<b</b>
   
 `preprocess_the_video.ipynb`
 <br/>
