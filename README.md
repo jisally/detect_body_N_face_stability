@@ -52,7 +52,17 @@ Requirements.txt<br/><br/>
   <br/><br/><br/>
   <li><b>Calculate the Angle</b><br/></li>
   <br/>
-  RUN main.py
+  Calculate the body angle
+
+
+    python body_main.py
+
+<br/>  
+  Calculate the face angle
+
+
+    python face_main.py
+
 </ul>
 
 
