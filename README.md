@@ -50,6 +50,11 @@ Requirements.txt<br/><br/>
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
   <br/><br/><br/>
+  <li><b> Add body_landmark directory </b><br/></li>
+  <br/>
+  <li><b> Add face_landmark directory </b><br/></li>
+  <br/>
+  
   <li><b>Calculate the Angle</b><br/></li>
   <br/>
   Calculate the body angle
