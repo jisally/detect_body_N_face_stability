@@ -63,6 +63,13 @@ Requirements.txt<br/><br/>
 
     python face_main.py
 
+
+<br/>  
+  Track standing and sitting
+
+
+    python track_shoulder.py
+    
 </ul>
 
 
