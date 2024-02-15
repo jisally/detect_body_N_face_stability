@@ -6,9 +6,9 @@ from tqdm import tqdm
 from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.animation import FuncAnimation
+import os
 
-
-def face_detection(video_path='input_your_mp4'):
+def face_detection(video_path):
     """
     Detects facial landmarks from a video using MediaPipe FaceMesh.
 
@@ -57,6 +57,11 @@ def face_detection(video_path='input_your_mp4'):
     cap.release()
     cv2.destroyAllWindows()
 
+    # face_landmark 폴더가 없으면 생성합니다.
+    if not os.path.exists('face_landmark'):
+        os.makedirs('face_landmark')
+
+    # 파일을 저장할 디렉토리가 생성되었으므로 데이터를 파일에 저장합니다.
     for i in target_landmarks:
         with open(f'face_landmark/{landmark_map[i]}.json', 'w') as f:
             json.dump(landmark_data[landmark_map[i]], f)

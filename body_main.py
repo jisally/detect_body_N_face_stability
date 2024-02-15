@@ -6,15 +6,16 @@ import mediapipe as mp
 from tqdm import tqdm
 from matplotlib.animation import FuncAnimation
 from mpl_toolkits.mplot3d import Axes3D
+import os
 
-def body_detection(video_path='input_your_mp4'):
+def body_detection(video_path):
     """
     Detects body landmarks from a video using MediaPipe Pose.
 
     Parameters:
         video_path (str): Path to the input video file.
 
-    Saves the detected landmark coordinates as JSON files in the 'pose_landmark' directory.
+    Saves the detected landmark coordinates as JSON files in the 'body_landmark' directory.
     """
     mp_drawing = mp.solutions.drawing_utils
     mp_pose = mp.solutions.pose
@@ -78,8 +79,14 @@ def body_detection(video_path='input_your_mp4'):
     cap.release()
     cv2.destroyAllWindows()
 
+    folder_path = 'body_landmark'
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+
+
+    # JSON 파일 저장
     for name, coordinates in landmark_dict.items():
-        with open(f'pose_landmark/{name}.json', 'w') as f:
+        with open(f'{folder_path}/{name}.json', 'w') as f:
             json.dump(coordinates, f)
 
 def body_plane_animation():
@@ -89,9 +96,9 @@ def body_plane_animation():
     Reads the shoulder landmark coordinates from JSON files and generates the animation.
     Saves the computed body planes and the origin coordinates as JSON files.
     """
-    with open('pose_landmark/left_shoulder.json') as f:
+    with open('body_landmark/left_shoulder.json') as f:
         left_shoulder = json.load(f)
-    with open('pose_landmark/right_shoulder.json') as f:
+    with open('body_landmark/right_shoulder.json') as f:
         right_shoulder = json.load(f)
 
     center = (np.array(left_shoulder[0]) + np.array(right_shoulder[0])) / 2
@@ -117,7 +124,7 @@ def body_plane_animation():
         left_shoulder_filtered.append(l)
         right_shoulder_filtered.append(r)
 
-    with open('pose_landmark/body_normal_line.json', 'w') as f:
+    with open('body_landmark/body_normal_line.json', 'w') as f:
         json.dump(planes, f)
 
     fig = plt.figure()
@@ -147,7 +154,7 @@ def body_plane_animation():
     ani = FuncAnimation(fig, update, frames=len(planes), interval=200, repeat=False)
     plt.show()
 
-    with open('pose_landmark/origin.json', 'w') as f:
+    with open('body_landmark/origin.json', 'w') as f:
         json.dump(origin.tolist(), f)
 
 def body_angle():
@@ -157,7 +164,7 @@ def body_angle():
     Reads the computed body planes from a JSON file and calculates the front-back and right-left angles.
     Saves the calculated angles as JSON files.
     """
-    with open('pose_landmark/body_normal_line.json', 'r') as f:
+    with open('body_landmark/body_normal_line.json', 'r') as f:
         planes = json.load(f)
 
     body_angle_front_back = []
@@ -174,10 +181,10 @@ def body_angle():
             body_angle_front_back.append(None)
             body_angle_right_left.append(None)
 
-    with open('pose_landmark/body_angle_front_back.json', 'w') as f:
+    with open('body_landmark/body_angle_front_back.json', 'w') as f:
         json.dump(body_angle_front_back, f)
 
-    with open('pose_landmark/body_angle_right_left.json', 'w') as f:
+    with open('body_landmark/body_angle_right_left.json', 'w') as f:
         json.dump(body_angle_right_left, f)
 
 def calculate_angle(a, b):
@@ -199,6 +206,7 @@ def calculate_angle(a, b):
     return np.degrees(theta)
 
 if __name__ == "__main__":
-    body_detection()
+    video_path = 'input_your_mp4'
+    body_detection(video_path)
     body_plane_animation()
     body_angle()

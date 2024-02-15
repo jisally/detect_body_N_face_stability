@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 # json 파일에서 랜드마크 데이터를 불러옵니다.
-with open('pose_landmark/left_shoulder.json') as f:
+with open('body_landmark/left_shoulder.json') as f:
     left_shoulder = json.load(f)
-with open('pose_landmark/right_shoulder.json') as f:
+with open('body_landmark/right_shoulder.json') as f:
     right_shoulder = json.load(f)
 
 # 각 프레임에서 두 어깨의 중점을 계산합니다.
@@ -21,11 +21,11 @@ for l, r in zip(left_shoulder, right_shoulder):
         centers.append(center)
 
 # 중점 데이터를 json 파일에 저장합니다.
-with open('pose_landmark/center_shoulder.json', 'w') as f:
+with open('body_landmark/center_shoulder.json', 'w') as f:
     json.dump(centers, f)
 
 # 중점 데이터를 불러옵니다.
-with open('pose_landmark/center_shoulder.json') as f:
+with open('body_landmark/center_shoulder.json') as f:
     centers = json.load(f)
 
 # y축의 변화를 시각화합니다.
