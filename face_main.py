@@ -8,7 +8,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.animation import FuncAnimation
 
 
-def face_detection(video_path='C:/Users/seungyeon0510/Desktop/kist_2024/main/video/original/child_focus_240123_13_SI008L0F_T2.mp4'):
+def face_detection(video_path='input_your_mp4'):
     """
     Detects facial landmarks from a video using MediaPipe FaceMesh.
 

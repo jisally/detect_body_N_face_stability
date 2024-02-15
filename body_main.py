@@ -7,7 +7,7 @@ from tqdm import tqdm
 from matplotlib.animation import FuncAnimation
 from mpl_toolkits.mplot3d import Axes3D
 
-def body_detection(video_path='C:/Users/seungyeon0510/Desktop/kist_2024/main/video/original/child_focus_240123_13_SI008L0F_T2.mp4'):
+def body_detection(video_path='input_your_mp4'):
     """
     Detects body landmarks from a video using MediaPipe Pose.
 
