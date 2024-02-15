@@ -198,6 +198,8 @@ Calculates the angle between two vectors.
 <br/>
 : ectract each landmark's (x,y,z) in video
 <br/>
+: Enter the path of the video file in input_your_mp4
+<br/>
 
 `body_plane_animation.py`<br/>
 : extract normal line in body and visualization<br/>
@@ -208,6 +210,9 @@ Calculates the angle between two vectors.
 
 `face_detection.py`<br/>
 : ectract each landmark's (x,y,z) in video
+<br/>
+: Enter the path of the video file in input_your_mp4
+<br/>
 
 `face_plane_animation.py`<br/>
 : extract normal line in face and visualization
