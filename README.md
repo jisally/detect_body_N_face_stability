@@ -14,7 +14,7 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 <br/><br/>
 <h1>:calendar: When? </h1>
 <hr/>
-0102-0229, KIST_Creamo<br/>
+240102-240229, KIST_Creamo<br/>
 <br/><br/>
 <h1>:gear: Environment Setting</h1>
 <hr/>
@@ -52,14 +52,129 @@ Requirements.txt<br/><br/>
   <br/><br/><br/>
   <li><b>Calculate the Angle</b><br/></li>
   <br/>
-  RUN main.py
+  Calculate the body angle
+
+
+    python body_main.py
+
+<br/>  
+  Calculate the face angle
+
+
+    python face_main.py
+
 </ul>
 
 
 <br/>
+
+<h1> 📄 Docstring </h1>
+<hr/>
+
+<details>
+<summary><code>body_detection()</code></summary>
+
+Detects body landmarks from a video using MediaPipe Pose.
+
+### Parameters:
+- `video_path` (str): Path to the input video file.
+
+### Notes:
+- Saves the detected landmark coordinates as JSON files in the 'pose_landmark' directory.
+
+</details>
+
+<details>
+<summary><code>body_plane_animation()</code></summary>
+
+Creates a 3D animation of body planes based on the detected shoulder landmarks.
+
+### Notes:
+- Reads the shoulder landmark coordinates from JSON files and generates the animation.
+- Saves the computed body planes and the origin coordinates as JSON files.
+
+</details>
+
+<details>
+<summary><code>body_angle()</code></summary>
+
+Calculates body angles from the detected body planes.
+
+### Notes:
+- Reads the computed body planes from a JSON file and calculates the front-back and right-left angles.
+- Saves the calculated angles as JSON files.
+
+</details>
+
+<details>
+<summary><code>calculate_angle(a, b)</code></summary>
+
+Calculates the angle between two vectors.
+
+### Parameters:
+- `a` (list): First vector.
+- `b` (list): Second vector.
+
+### Returns:
+- `float`: Angle between the two vectors in degrees.
+
+</details>
+
+<details>
+<summary><code>face_detection()</code></summary>
+
+Detects facial landmarks from a video using MediaPipe FaceMesh.
+
+### Parameters:
+- `video_path` (str): Path to the input video file.
+
+### Notes:
+- Saves the detected facial landmark coordinates as JSON files in the 'face_landmark' directory.
+
+</details>
+
+<details>
+<summary><code>face_plane_animation()</code></summary>
+
+Generates a 3D animation of facial planes based on the detected facial landmarks.
+
+### Notes:
+- Reads the facial landmark coordinates from JSON files and generates the animation.
+- Saves the computed facial planes as JSON files.
+
+</details>
+
+<details>
+<summary><code>face_angle()</code></summary>
+
+Calculates facial angles from the detected facial planes.
+
+### Notes:
+- Reads the computed facial planes from a JSON file and calculates the front-back and right-left angles.
+- Saves the calculated angles as JSON files.
+
+</details>
+
+<details>
+<summary><code>calculate_angle(a, b)</code></summary>
+
+Calculates the angle between two vectors.
+
+### Parameters:
+- `a` (list): First vector.
+- `b` (list): Second vector.
+
+### Returns:
+- `float`: Angle between the two vectors in degrees.
+
+</details>
+<br/>
+
+
 <h1> ➕ Details </h1>
 <hr/>
-<b>preprocess_the_video.ipynb</b>
+  
+`preprocess_the_video.ipynb`
 <br/>
 : Enter the path of the video file in input_your_mp4
 <br/>
@@ -71,25 +186,28 @@ Requirements.txt<br/><br/>
     ffmpeg -i input.mp4 -r 10 output.mp4
 
  <br/>
-<b>body_detection.py</b> <br/>
+ 
+`body_detection.py`
+<br/>
 : ectract each landmark's (x,y,z) in video
+<br/>
 
-<b>body_plane_animation.py</b> <br/>
-: extract normal line in body and visualization
+`body_plane_animation.py`<br/>
+: extract normal line in body and visualization<br/>
 
-<b>body_angle.py</b> <br/>
-: extract the angle between the normal vector and the z-axis
+`body_angle.py`<br/>
+: extract the angle between the normal vector and the z-axis<br/>
 : extract the angle between the normal vector and the x-axis
 
-<b>face_detection.py</b> <br/>
+`face_detection.py`<br/>
 : ectract each landmark's (x,y,z) in video
 
-<b>face_plane_animation.py</b> <br/>
+`face_plane_animation.py`<br/>
 : extract normal line in face and visualization
 
-<b>face_angle.py</b> <br/>
-: extract the angle between the normal vector and the z-axis(ex. nod)
+`face_angle.py`<br/>
+: extract the angle between the normal vector and the z-axis(ex. nod)<br/>
 : extract the angle between the normal vector and the x-axis(ex. shake head)
 
-<b>shoulder_track.py</b> <br/>
+`shoulder_track.py`<br/>
 : Track the midpoint between shoulder_right and shoulder_left
