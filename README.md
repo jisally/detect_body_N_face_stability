@@ -59,7 +59,9 @@ Requirements.txt<br/><br/>
 <br/>
 <h1> ➕ Details </h1>
 <hr/>
-<b>preprocess_the_video.ipynb</b>
+<b</b>
+  
+`preprocess_the_video.ipynb`
 <br/>
 : Enter the path of the video file in input_your_mp4
 <br/>
@@ -71,25 +73,28 @@ Requirements.txt<br/><br/>
     ffmpeg -i input.mp4 -r 10 output.mp4
 
  <br/>
-<b>body_detection.py</b> <br/>
+ 
+`body_detection.py`
+<br/>
 : ectract each landmark's (x,y,z) in video
+<br/>
 
-<b>body_plane_animation.py</b> <br/>
-: extract normal line in body and visualization
+`body_plane_animation.py`<br/>
+: extract normal line in body and visualization<br/>
 
-<b>body_angle.py</b> <br/>
-: extract the angle between the normal vector and the z-axis
+`body_angle.py`<br/>
+: extract the angle between the normal vector and the z-axis<br/>
 : extract the angle between the normal vector and the x-axis
 
-<b>face_detection.py</b> <br/>
+`face_detection.py`<br/>
 : ectract each landmark's (x,y,z) in video
 
-<b>face_plane_animation.py</b> <br/>
+`face_plane_animation.py`<br/>
 : extract normal line in face and visualization
 
-<b>face_angle.py</b> <br/>
-: extract the angle between the normal vector and the z-axis(ex. nod)
+`face_angle.py`<br/>
+: extract the angle between the normal vector and the z-axis(ex. nod)<br/>
 : extract the angle between the normal vector and the x-axis(ex. shake head)
 
-<b>shoulder_track.py</b> <br/>
+`shoulder_track.py`<br/>
 : Track the midpoint between shoulder_right and shoulder_left
