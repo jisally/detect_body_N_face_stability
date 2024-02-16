@@ -19,7 +19,10 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 <h1>:gear: Environment Setting</h1>
 <hr/>
 <ul>
-  <li><b>Python: </b> 3.11.1</li>
+  <li><b>Python: </b> 3.11.8</li>
+  The project utilizes a virtual environment in Visual Studio Code to run Python 3.11.8
+<br/><br/>
+  
   <li><b>IDE: </b> VSCode, Google Colab</li>
 </ul>
 <br/><br/>
