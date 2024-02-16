@@ -194,32 +194,29 @@ Calculates the angle between two vectors.
 
  <br/>
  
-`body_detection.py`
+`body_main.py`
 <br/>
 : ectract each landmark's (x,y,z) in video
 <br/>
 : Enter the path of the video file in input_your_mp4
 <br/>
 
-`body_plane_animation.py`<br/>
 : extract normal line in body and visualization<br/>
 
-`body_angle.py`<br/>
 : extract the angle between the normal vector and the z-axis<br/>
 : extract the angle between the normal vector and the x-axis
 
-`face_detection.py`<br/>
+`face_main.py`<br/>
 : ectract each landmark's (x,y,z) in video
 <br/>
 : Enter the path of the video file in input_your_mp4
 <br/>
 
-`face_plane_animation.py`<br/>
 : extract normal line in face and visualization
 
-`face_angle.py`<br/>
 : extract the angle between the normal vector and the z-axis(ex. nod)<br/>
 : extract the angle between the normal vector and the x-axis(ex. shake head)
+<br/>
 
 `shoulder_track.py`<br/>
 : Track the midpoint between shoulder_right and shoulder_left
