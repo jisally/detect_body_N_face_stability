@@ -90,7 +90,7 @@ Detects body landmarks from a video using MediaPipe Pose.
 - `video_path` (str): Path to the input video file.
 
 ### Notes:
-- Saves the detected landmark coordinates as JSON files in the 'pose_landmark' directory.
+- Saves the detected landmark coordinates as JSON files in the 'body_landmark' directory.
 
 </details>
 
