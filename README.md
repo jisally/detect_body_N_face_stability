@@ -16,6 +16,13 @@ Rotation of the head left/right: Angle between the normal vector of the head pla
 <hr/>
 240102-240229, KIST_Creamo<br/>
 <br/><br/>
+<h1>🙂 Members </h1>
+<hr/>
+
+|Members|
+|------|
+|Seungyeon JI|
+
 <h1>:gear: Environment Setting</h1>
 <hr/>
 <ul>
