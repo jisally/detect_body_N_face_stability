@@ -91,6 +91,44 @@ Requirements.txt<br/><br/>
 
 
 <br/>
+<h1>🏆 Results </h1>
+<hr/>
+
+```
+ADDI_POSE
+|   .gitignore
+|   body_main.py
+|   face_main.py
+|   preprocess_the_video.ipynb
+|   README.md
+|   requirements.txt
+|   track_shoulder.py
+|   tree.txt
+|   
++---body_landmark
+|       body_angle_front_back.json
+|       body_angle_right_left.json
+|       body_normal_line.json
+|       left_ear.json
+|       left_eye.json
+|       left_shoulder.json
+|       nose.json
+|       origin.json
+|       right_ear.json
+|       right_eye.json
+|       right_shoulder.json
+|       
++---face_landmark
+|       face_angle_front_back.json
+|       face_angle_right_left.json
+|       face_normal_line.json
+|       left_face.json
+|       right_face.json
+|       top_face.json
+|       
+\---video
+```
+<br/>
 
 <h1> 📄 Docstring </h1>
 <hr/>
