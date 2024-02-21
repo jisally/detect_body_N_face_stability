@@ -103,7 +103,6 @@ ADDI_POSE
 |   README.md
 |   requirements.txt
 |   track_shoulder.py
-|   tree.txt
 |   
 +---body_landmark
 |       body_angle_front_back.json
