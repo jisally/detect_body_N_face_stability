@@ -4,6 +4,7 @@ Assessment of postural stability using Google MediaPipe by analyzing changes in 
 <br/><br/>
 <h1>💻 Project Introduction </h1>
 <hr/>
+To detect abnormal action of preschoolers during block building behavior, we implemented posture stability based on a mediapipe landmarks metrics.
 
 Rotation of the body forward/backward: Angle between the normal vector of the body plane and the z-axis.<br/>
 Rotation of the body left/right: Angle between the normal vector of the body plane and the x-axis.<br/>
